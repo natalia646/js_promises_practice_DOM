@@ -57,10 +57,6 @@ const promise3 = new Promise((resolve) => {
       resolve(['Third promise was resolved', 'success']);
     }
   });
-
-  if (rightClick && leftClick) {
-    resolve(['Third promise was resolved', 'success']);
-  }
 });
 
 promise1.then(getElement).catch(getElement);
