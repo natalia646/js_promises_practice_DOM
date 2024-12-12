@@ -31,14 +31,14 @@ const promise1 = new Promise((resolve, reject) => {
 });
 
 const promise2 = new Promise((resolve) => {
-  document.addEventListener('click', () => {
-    resolve(['Second promise was resolved', 'success']);
-  });
-
-  document.addEventListener('contextmenu', (e) => {
+  const success = (e) => {
     e.preventDefault();
     resolve(['Second promise was resolved', 'success']);
-  });
+  };
+
+  document.addEventListener('click', success);
+
+  document.addEventListener('contextmenu', success);
 });
 
 const promise3 = new Promise((resolve) => {
